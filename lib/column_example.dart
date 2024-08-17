@@ -1,38 +1,34 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_masterclass/home.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: Home(),
-  ));
-}
+// Type 'STL' then choose to create a stateless widget
+class ColumnExample extends StatelessWidget {
+  const ColumnExample({super.key});
 
-class Sandbox extends StatelessWidget {
-  const Sandbox({super.key});
-
+  // Hot reload needs build method
   @override
   Widget build(BuildContext context) {
+    // Scaffold can make material styles display properly in the app
     return Scaffold(
       appBar: AppBar(
         title: const Text('Sandbox'),
         backgroundColor: Colors.grey,
       ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            height: 100,
+            width: 100,
             color: Colors.red,
             child: const Text('one'),
           ),
           Container(
-            height: 200,
+            width: 200,
             color: Colors.green,
             child: const Text('two'),
           ),
           Container(
-            height: 300,
+            width: 300,
             color: Colors.blue,
             child: const Text('three'),
           ),
@@ -42,8 +38,8 @@ class Sandbox extends StatelessWidget {
   }
 }
 
-// 'Row' has 'children' field, but not 'child'.
-// Row height is dictated by the largest height item inside.
-// Use 'CrossAxisAlignment.stretch' will bypass the rule of largest height item.
+// 'Column' has 'children' field, but not 'child'.
+// Column width is dictated by the largest width item inside.
+// Use 'CrossAxisAlignment.stretch' will bypass the rule of largest width item.
 // Instead, try to occupy the space from its parent as passible as it can,
-// possibly the rest of the screen vertically other than app bar.
+// possibly the full width of the screen. 
