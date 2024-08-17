@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_masterclass/coffee_prefs.dart';
+import 'package:flutter_masterclass/styled_body_text.dart';
 
 // Type 'STL' then choose to create a stateless widget
 class Home extends StatelessWidget {
@@ -22,7 +23,7 @@ class Home extends StatelessWidget {
           Container(
             color: Colors.brown[200],
             padding: const EdgeInsets.all(20),
-            child: const Text('How I like my coffee...'),
+            child: const StyledBodyText('How I like my coffee...'),
           ),
           Container(
             color: Colors.brown[100],
