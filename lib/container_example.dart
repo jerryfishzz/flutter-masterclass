@@ -36,4 +36,4 @@ class ContainerExample extends StatelessWidget {
 // Can apply padding and margin easily; can apply a color.
 // By default, container's width and heigh are decided by its children.
 // Can also specify the width and height.
-// If NO children, container will try to occupy the space as possible as it can.
+// If NO child, container will try to occupy the space as possible as it can.
